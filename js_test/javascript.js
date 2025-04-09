@@ -6,16 +6,15 @@ var myLoop = setInterval(changeHeadline, 1000);
 
 //write function
 function changeHeadline() {
-    var headlineElement = document.getElementById("headline"); // Fixed typo
+    var headlineElement = document.getElementById("headline"); 
     var newHeadline = headlineArray[headlineIndex];
     headlineElement.innerHTML = newHeadline;
     headlineIndex++;
     if (headlineIndex >= headlineLength) {
-        headlineIndex = 0; // Reset to loop indefinitely
-    }
+        headlineIndex = 0; 
 }
 
 //run function
 window.onload = function() {
-    myLoop; // Start the interval
+    myLoop; 
 };
