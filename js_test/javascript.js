@@ -13,8 +13,9 @@ function changeHeadline() {
     if (headlineIndex >= headlineLength) {
         headlineIndex = 0; 
 }
+}
 
 //run function
 window.onload = function() {
     myLoop; 
-};
+}
