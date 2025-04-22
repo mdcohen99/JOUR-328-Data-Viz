@@ -122,47 +122,40 @@ var myScatterChart = new Chart(ctx, {
 
 // starting Bar Chart
 var ctx = document.getElementById('myBarChart').getContext('2d');
-var myBarChart = new Chart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
+        labels: ['America', 'East Asia & Pacific', 'Europe & Central Asia', 'Middle East & North Africa', 'South Asia', 'Sub-Saharan Africa'],
         datasets: [{
-            label: '# of Apples',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Average GDP per capita',
+            data: [18791.13, 14480.30, 20818.45, 13856.00, 2505.17, 2569.00],
             backgroundColor: [
                 '#ff0800'
-            ],
-        },
-        {
-            label: '# of Oranges',
-            data: [22, 10, 23, 6, 22, 13],
-            backgroundColor: [
-                '#FFA500'
-            ],
-        }
+            ]
+        },  
     ]
-},
-options: {
-    responsive: true,
-    plugins: {
-        title: {
-            display: true,
-            text: 'Apples and Oranges by year',
-            font: {
-                size: 18
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Europe & Central Asia have the highest average GDP per capita of six main world regions',
+                font: {
+                    size: 18
+                }
+            },
+            subtitle: {
+                display: true,
+                text: 'South Asia and Sub-Saharan Africa trail far behind the rest of the world.'
             }
         },
-        subtitle: {
-            display: true,
-            text: 'For all but one year, oranges outnumbered apples'
-        }
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
     },
-    scales: {
-        y: {
-            beginAtZero: true
-        }
-    },
-},
 });
 
 //End Bar Chart
